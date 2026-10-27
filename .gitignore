@@ -1,0 +1,32 @@
+# ============================================================ 编译产物
+# build.bat 把 DLL 直接输出到仓库根目录，不入库（clone 后跑 build.bat 即可生成）
+/ImageZoomAddin.dll
+/ImageZoomAddin.previous.dll
+/.obj/
+*.pdb
+*.obj
+*.tlb
+
+# ============================================================ 探针程序
+# tools/uiprobe-build.bat 的编译输出、截屏和运行日志
+/tools/_probe/
+/tools/hostprobe/
+
+# ============================================================ 测试文档
+# 含真实图片的 Office 文档，只在本机做验证用
+/testdata/*.docx
+/testdata/*.xlsx
+/testdata/*.pptx
+/testdata/*.png
+/testdata/*.jpg
+
+# ============================================================ 打包临时文件
+/installer/Output/
+*.tmp
+
+# ============================================================ 系统 / 编辑器
+.vs/
+.vscode/
+Thumbs.db
+desktop.ini
+*~

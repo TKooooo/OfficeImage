@@ -1,0 +1,47 @@
+﻿OfficeImage · Word / Excel / PowerPoint 图片放大预览
+=====================================================
+
+装好之后，在 Word、Excel、PowerPoint 里点一下文档中的图片，
+图片右下角会浮出三个小按钮，鼠标移上去会变深色：
+
+    [放大镜]  以原图最高分辨率预览。预览窗里滚轮缩放、按住左键拖动平移，
+              图片在文档里被缩到 1 厘米，也能看清原始像素。
+    [剪刀]    裁剪菜单：按形状裁剪 / 按比例裁剪 / 自由裁剪 / 重设形状和大小。
+    [旋转]    向右旋转 90° / 向左旋转 90° / 水平翻转 / 垂直翻转。
+
+点文档空白处按钮自动消失。缩放、拖动图片、滚动页面，按钮都会跟着图片走。
+
+
+系统要求
+--------
+· Windows 7 / Windows 8 / Windows 8.1 / Windows 10 / Windows 11（32 位、64 位都支持）
+· Microsoft Office 2010 及以上（Word、Excel、PowerPoint 任一或全部）
+· .NET Framework 4.0 或更高版本（Win8 及以上系统自带；Win7 若未安装，
+  请先装微软官网的 .NET Framework 4.6.2）
+
+本插件只服务 Microsoft Office。WPS 自带同类功能，装在这里也不会被加载。
+
+
+卸载
+----
+Windows 10 / 11：设置 → 应用 → 已安装的应用 → 搜索 "OfficeImage" → 卸载
+Windows 7：     控制面板 → 程序和功能 → 选择 "OfficeImage 图片放大预览" → 卸载
+
+卸载前请先关闭 Word / Excel / PowerPoint。
+卸载会同时清理 COM 注册和三个 Office 程序里的加载项条目，不留尾巴。
+
+
+出问题时
+--------
+1. 先看运行日志：%LOCALAPPDATA%\ImageZoomAddin\addin.log
+   里面记录了每次点击图片、坐标换算、裁剪/旋转的结果。
+2. 加载项被 Office 禁用过（比如某次崩溃后），重新运行一次安装程序即可，
+   安装程序会清掉 Office 的"禁用项"记录并把加载项重新设为启用。
+3. 确认加载项在：文件 → 选项 → 加载项 → 管理[COM 加载项] → 转到，
+   列表里应该有 "OfficeImage 图片放大预览"，且前面的勾是打上的。
+
+
+安装位置
+--------
+程序本体：%ProgramFiles%\OfficeImage\ImageZoomAddin.dll
+卸载信息：写在注册表 Uninstall 项，随"程序和功能"一起显示
